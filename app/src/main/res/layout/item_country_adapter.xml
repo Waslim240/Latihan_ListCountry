@@ -16,9 +16,9 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_margin="15dp"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_margin="15dp"
                 android:src="@mipmap/ic_launcher"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -27,9 +27,10 @@
 
             <TextView
                 android:id="@+id/nameTv"
-                android:layout_marginStart="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
                 android:text="name"
                 android:textColor="@color/black"
                 android:textSize="20sp"
@@ -37,14 +38,14 @@
                 app:layout_constraintBottom_toTopOf="@+id/capitalTv"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_chainStyle="packed" />
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/capitalTv"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
                 android:text="capital"
                 android:textColor="@color/black"
                 android:textSize="15sp"
@@ -55,16 +56,29 @@
 
             <TextView
                 android:id="@+id/regionTv"
-                android:layout_marginStart="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
                 android:text="region"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/population"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toBottomOf="@+id/capitalTv" />
+
+            <TextView
+                android:id="@+id/population"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="population"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/nameTv"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/regionTv" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
